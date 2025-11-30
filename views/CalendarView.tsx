@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // views/CalendarView.tsx
 import React, { useState } from "react";
 import { Clock, ChevronLeft, ChevronRight } from "lucide-react";

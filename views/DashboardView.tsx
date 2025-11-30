@@ -36,8 +36,8 @@ const DashboardView: React.FC = () => {
       </div>
 
       <div className="bg-gradient-to-br-from-coral-500 to-coral-600 rounded-3xl p-8 text-white">
-        <h2 className="text-2xl text-gray-600 font-bold mb-4">
-          Today's Outfits
+        <h2 className="text-2xl text-black font-bold mb-4">
+          Today&apos;s Outfit
         </h2>
         {todaySchedules.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-600">
