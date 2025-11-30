@@ -117,7 +117,7 @@ const CreateView: React.FC<{ onBack: () => void }> = ({ onBack }) => {
           <button
             onClick={handleCreate}
             disabled={!title}
-            className="w-full py-4 bg-coral-500 text-white rounded-xl font-semibold hover:bg-coral-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full py-4 bg-[#FF7F50] text-black  rounded-xl font-semibold hover:bg-coral-600 transition-colors disabled:cursor-not-allowed"
           >
             Create Outfit
           </button>

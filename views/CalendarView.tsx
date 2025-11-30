@@ -24,6 +24,9 @@ const CalendarGrid: React.FC<{
   const firstDay = getFirstDayOfMonth(year, month);
   const days = [];
 
+  // Get today's date string once for comparison
+  const todayString = formatDate(new Date());
+
   for (let i = 0; i < firstDay; i++) {
     days.push(<div key={`empty-${i}`} className="aspect-square" />);
   }
@@ -33,15 +36,31 @@ const CalendarGrid: React.FC<{
     const schedules = getScheduleByDate(date);
     const hasSchedule = schedules.length > 0;
 
+    const isToday = date === todayString;
+
+    const teal50Bg = "bg-[#E0F7FA]";
+    const teal500Bg = "bg-[#00BCD4]";
+    const teal700Border = "border-[#00838F]";
+
     days.push(
       <div
         key={day}
         onClick={() => onDateClick(date)}
         className={`aspect-square p-2 rounded-xl cursor-pointer transition-all hover:bg-gray-100 ${
           hasSchedule ? "bg-[#FDECEE]" : ""
+        }${
+          isToday
+            ? `!${teal500Bg} !text-white border-2 ${teal700Border} shadow-md` // Today Highlight
+            : ""
         }`}
       >
-        <div className="text-sm font-medium text-black mb-1">{day}</div>
+        <div
+          className={`text-sm font-medium text-black mb-1 ${
+            isToday ? "text-white" : "text-black"
+          }`}
+        >
+          {day}
+        </div>
         {hasSchedule && (
           <div className="grid grid-cols-2 gap-1">
             {schedules.slice(0, 2).map((schedule) => {
