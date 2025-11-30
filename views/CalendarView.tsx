@@ -37,7 +37,7 @@ const CalendarGrid: React.FC<{
         key={day}
         onClick={() => onDateClick(date)}
         className={`aspect-square p-2 rounded-xl cursor-pointer transition-all hover:bg-gray-100 ${
-          hasSchedule ? "bg-coral-50" : ""
+          hasSchedule ? "bg-[#FDECEE]" : ""
         }`}
       >
         <div className="text-sm font-medium text-black mb-1">{day}</div>
@@ -244,7 +244,7 @@ const CalendarView: React.FC = () => {
                   onClick={() => setSelectedTimeSlot(slot as any)}
                   className={`py-3 rounded-xl border transition-colors ${
                     selectedTimeSlot === slot
-                      ? "border-coral-500 bg-coral-50 text-black"
+                      ? "border-coral-500 bg-[#FDECEE] text-black"
                       : "border-gray-200 hover:border-gray-300 text-black"
                   }`}
                 >
@@ -257,7 +257,7 @@ const CalendarView: React.FC = () => {
           <button
             onClick={handleSchedule}
             disabled={!selectedOutfitId}
-            className="w-full py-3 bg-coral-500 text-white rounded-xl font-semibold hover:bg-coral-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full py-3 bg-[#FF7F50] text-black rounded-xl font-semibold hover:bg-[#E67348] transition-colors  disabled:cursor-not-allowed"
           >
             Schedule
           </button>

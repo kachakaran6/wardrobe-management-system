@@ -88,12 +88,12 @@ const App: React.FC = () => {
         <main className="max-w-7xl mx-auto px-4 py-8">{renderView()}</main>
 
         {/* Footer */}
-        <footer className="bg-white border-t border-gray-100 mt-16">
+        {/* <footer className="bg-white border-t border-gray-100 mt-16">
           <div className="max-w-7xl mx-auto px-4 py-6 text-center text-black text-sm">
             <p>Closely - Your Personal Wardrobe Manager</p>
             <p className="mt-1">All data stored locally in your browser</p>
           </div>
-        </footer>
+        </footer> */}
       </div>
     </AppProvider>
   );
